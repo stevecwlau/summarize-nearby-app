@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Nearby App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- leaflet css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- leaflet js -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- turf js -->
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- data paths -->
+    <script src="../data/igeocom_4326.js"></script>
+
+</head>
+
+<body>
+    <h1>Summarizing <br class="pa-line-break">Nearby App</h1>
+    <div class="map-container">
+        <div class="radius-input">
+            <input placeholder="Search radius" id="radius" name="" inputmode="numeric" />
+            <button class="send-btn">Enter</button>
+        </div>
+        <button class="reset-btn">
+            <i class="fa-solid fa-broom"></i>
+        </button>
+        <div id="map"></div>
+    </div>
+    <div class="stats-container">
+        <div class="box" id="cmfCnt-box" onmouseover="">
+            <i class="fa-solid fa-dumpster"></i>
+            <span id="cmfCnt"></span>
+        </div>
+        <div class="box" id="schCnt-box">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span id="schCnt"></span>
+        </div>
+        <div class="box" id="rsfCnt-box">
+            <i class="fa-solid fa-tree"></i>
+            </span>
+            <span id="rsfCnt"></span>
+        </div>
+        <div class="box" id="hncCnt-box">
+            <i class="fa-solid fa-house-medical"></i>
+            <span id="hncCnt"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
