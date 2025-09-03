@@ -1,7 +1,9 @@
 # Leaflet Summarize Nearby App
 A minimal web-based mapping application built with Leaflet.js that allows users to explore and summarize nearby community points of interest (e.g., commercial, educational, leisure, health) within a customizable radius around a clicked point in Hong Kong. It uses government basemap tiles from the Lands Department and filters [iGeoCom data](https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=landsd_rcd_1637225500507_48341) for points of interest.
 
-<img src="assets/demo.gif" width="800" height="600"/>
+<a href="https://stevecwlau.github.io/summarize-nearby-app/">
+  <img src="assets/demo.gif" width="800" height="600"/>
+</a>
 
 ## Features
 - Interactive map centered on Hong Kong with [LandsD topgraphic basemap](https://portal.csdi.gov.hk/csdi-webpage/apidoc/TopographicMapAPI) and [labels](https://portal.csdi.gov.hk/csdi-webpage/apidoc/MapLabelAPI).
@@ -33,3 +35,4 @@ A minimal web-based mapping application built with Leaflet.js that allows users 
 - `turf.pointsWithinPolygon` filters features inside the circle.
 - Counts update for each category; filtered points are drawn with `L.circleMarker`.
 - Radius input is in meters; converted to kilometers internally.
+
